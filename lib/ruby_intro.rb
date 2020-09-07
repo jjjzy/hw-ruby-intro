@@ -21,22 +21,33 @@ end
 # Part 2
 
 def hello(name)
-  # YOUR CODE HERE
-	puts "Hello World!"
+	return "Hello, " + name
 end
 
 def starts_with_consonant? s
-  # YOUR CODE HERE
-	puts "Hello World!"
+	return s.start_with?('b', 'c', 'd', 'f', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'v', 'w', 'x' ,'y', 'z', 'B', 'C', 'D', 'F', 'G', 'H', 'G', 'K', 'L', 'M', 'N', 'P', 'Q', 'R', 'S', 'T', 'V', 'W', 'X','Y','Z')
 end
 
 def binary_multiple_of_4? s
-  # YOUR CODE HERE
-	puts "Hello World!"
+	return s =~ /^[01]*00$/
 end
 
 # Part 3
 
 class BookInStock
+	attr_accessor :isbn
+	attr_accessor :price
+
+	def initialize(isbn, price)
+		@isbn = isbn  
+		@price = price
+		if price < 0 || isbn.empty?
+			raise ArgumentError
+		end
+	end
+	
+	def price_as_string
+		"$%2.2f" % @price
+	end
 # YOUR CODE HERE
 end
