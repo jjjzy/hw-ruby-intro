@@ -4,7 +4,7 @@
 
 def sum arr
 	sum = arr.inject(0, :+)
-    return sum
+	return sum
 end
 
 def max_2_sum arr
