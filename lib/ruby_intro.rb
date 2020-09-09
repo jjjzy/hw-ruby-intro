@@ -29,6 +29,9 @@ def starts_with_consonant? s
 end
 
 def binary_multiple_of_4? s
+	if s == "0"
+		return true
+	end
 	return s =~ /^[01]*00$/
 end
 
@@ -41,7 +44,7 @@ class BookInStock
 	def initialize(isbn, price)
 		@isbn = isbn  
 		@price = price
-		if price < 0 || isbn.empty?
+		if price <= 0 || isbn.empty?
 			raise ArgumentError
 		end
 	end
@@ -49,5 +52,4 @@ class BookInStock
 	def price_as_string
 		"$%2.2f" % @price
 	end
-# YOUR CODE HERE
 end
