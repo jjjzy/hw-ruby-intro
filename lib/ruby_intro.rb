@@ -1,4 +1,7 @@
-# When done, submit this entire file to the autograder.
+# Jiazhen Yu
+# CSCE 606
+# ASSIGNMENT 1
+# 09/08/2020
 
 # Part 1
 
